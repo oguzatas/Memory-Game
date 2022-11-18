@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class DrawingPanel {
 
@@ -14,6 +15,7 @@ public class DrawingPanel {
         f.add(dc); //adding canvas to the JFrame
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);
+
         //Initialize session Ends
     }
 }

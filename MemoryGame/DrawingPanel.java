@@ -3,6 +3,12 @@ import java.awt.*;
 
 public class DrawingPanel {
 
+
+    public static void setDrawingPanel()
+    {
+
+    }
+
     public static void main(String[] args) {
         int w=400;
         int h=400;

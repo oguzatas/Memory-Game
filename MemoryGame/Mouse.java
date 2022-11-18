@@ -4,6 +4,15 @@ import javax.swing.*;
 class Mouse extends Frame implements MouseListener {
 
     private int index;
+    private boolean clicked;
+
+    public boolean isClicked() {
+        return clicked;
+    }
+
+    public void setClicked(boolean clicked) {
+        this.clicked = clicked;
+    }
 
     public int getIndex() {
         return index;
@@ -16,10 +25,25 @@ class Mouse extends Frame implements MouseListener {
     @Override
     public void mouseClicked(MouseEvent e)
     {
+        //Getting index of the element
         double Xcor = e.getX();
         double Ycor = e.getY();
-
         indexDetector(Xcor,Ycor);
+
+        if (clicked ==false)
+        {
+
+        }
+        //Revealing the first circle
+        /*----------TODO ---------------*/
+
+
+        if(clicked==true)
+        {
+
+            clicked = false;
+        }
+
     }
 
     @Override
@@ -44,9 +68,6 @@ class Mouse extends Frame implements MouseListener {
 
     public void indexDetector(double X, double Y)
     {
-        int currentX=0;
-        int currentY=0;
-
         //Line 1
         if(X < 100 && Y < 100)
         {

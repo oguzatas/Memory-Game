@@ -38,6 +38,7 @@ public class main {
             }
         }
 
+        /* THIS CODE LINE IS HERE TO TEST THE ARRAY ALGORYTHM. UNCOMMENT IF NEEDED */
         for(int i=0; i<4;i++)
         {
             for(int j=0;j<4;j++)

@@ -8,10 +8,12 @@ public class DrawingPanel {
 
         JFrame f = new JFrame();
         DrawingCanvas dc = new DrawingCanvas(h,w);
+        //Initializing JFrame Options
         f.setSize(w,h);
         f.setTitle("Memory Game");
-        f.add(dc);
+        f.add(dc); //adding canvas to the JFrame
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);
+        //Initialize session Ends
     }
 }

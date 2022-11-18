@@ -18,6 +18,11 @@ public class DrawingCanvas extends JComponent {
 
     protected void paintComponent(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
+        g2d.drawLine(100,0,100,400);
+        g2d.drawLine(200,0,200,400);
+        g2d.drawLine(300,0,300,400);
+        
+
     }
 
 

@@ -3,10 +3,19 @@ import java.awt.*;
 import java.util.Random;
 public class ArrayInitializer {
 
+    private static int[][] game;
 
-    private static void InitializeGame()
+    public static int[][] getGame() {
+        return game;
+    }
+
+    public static void setGame(int[][] game) {
+        ArrayInitializer.game = game;
+    }
+
+    public static void InitializeGame()
     {
-
+        InitializeArray();
     }
 
     public static void InitializeArray()
@@ -40,6 +49,8 @@ public class ArrayInitializer {
 
             }
         }
+
+        setGame(game);
 
         /* THIS CODE LINE IS HERE TO TEST THE ARRAY ALGORYTHM. UNCOMMENT IF NEEDED */
 //        for(int i=0; i<4;i++)

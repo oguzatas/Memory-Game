@@ -16,7 +16,7 @@ public class DrawingCanvas extends JComponent {
     }
 
 
-    protected void paintComponent(Graphics g) {
+    protected void paintComponent(Graphics g) {  // With this method setting the board within the run
         //New Graphics object to draw board
         Graphics2D g2d = (Graphics2D) g;
 
@@ -41,6 +41,23 @@ public class DrawingCanvas extends JComponent {
         g2d.drawLine(0,100,400,100);
         g2d.drawLine(0,200,400,200);
         g2d.drawLine(0,300,400,300);
+    }
+
+    public static void setCanvas()
+    {
+        int w=400;
+        int h=400;
+
+        JFrame f = new JFrame();
+        DrawingCanvas dc = new DrawingCanvas(h,w);
+        //Setting JFrame Options
+        f.setSize(w,h);
+        f.setTitle("Memory Game");
+        f.add(dc); //adding canvas to the JFrame
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setVisible(true);
+
+        //Setting session Ends
     }
 
 

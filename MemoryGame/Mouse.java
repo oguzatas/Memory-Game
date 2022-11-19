@@ -25,20 +25,22 @@ class Mouse extends Frame implements MouseListener {
     @Override
     public void mouseClicked(MouseEvent e)
     {
+        clicked = false;
         //Getting index of the element
         double Xcor = e.getX();
         double Ycor = e.getY();
         indexDetector(Xcor,Ycor);
 
-        if (clicked ==false)
+        if (!clicked)
         {
 
+            clicked = true;
         }
         //Revealing the first circle
         /*----------TODO ---------------*/
 
 
-        if(clicked==true)
+        if(clicked)
         {
 
             clicked = false;

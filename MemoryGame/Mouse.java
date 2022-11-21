@@ -1,7 +1,8 @@
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.geom.Ellipse2D;
 import javax.swing.*;
-class Mouse extends Frame implements MouseListener {
+class Mouse extends JFrame implements MouseListener {
 
     private int index;
     private boolean clicked;
@@ -25,6 +26,8 @@ class Mouse extends Frame implements MouseListener {
     @Override
     public void mouseClicked(MouseEvent e)
     {
+
+
         clicked = false;
         //Getting index of the element
         double Xcor = e.getX();

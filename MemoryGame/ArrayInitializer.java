@@ -13,10 +13,7 @@ public class ArrayInitializer {
         ArrayInitializer.game = game;
     }
 
-    public static void InitializeGame()
-    {
-        InitializeArray();
-    }
+
 
     public static void InitializeArray()
     {
@@ -64,10 +61,7 @@ public class ArrayInitializer {
         }
     }
 
-    public static void EncodeColors()
-    {
 
-    }
 
 
 }

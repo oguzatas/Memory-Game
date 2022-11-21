@@ -12,20 +12,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
 
 
 
-//    public static void main(String args[]) {
-//
-//        ArrayInitializer.InitializeGame(); // Static method to initialize the array and set the game
-//
-//
-//        setCanvas();
-//
-//
-//
-//        //Setting session Ends
-//
-//
-//
-//    }
+
 
     //---------------------------------------------PROPERTIES-----------------------------------------//
     public boolean Clicked= false;
@@ -47,7 +34,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         width = w;
         height = h;
         addMouseListener(this);
-        ArrayInitializer.InitializeGame();
+        ArrayInitializer.InitializeArray();
 
         game = ArrayInitializer.getGame();
 

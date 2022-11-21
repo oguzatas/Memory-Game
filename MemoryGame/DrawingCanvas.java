@@ -1,7 +1,9 @@
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.geom.*;
+import java.util.concurrent.TimeUnit;
 import javax.swing.*;
 
 
@@ -48,6 +50,9 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         ArrayInitializer.InitializeGame();
 
         game = ArrayInitializer.getGame();
+
+
+
     }
 
     //---------------------------------------------GETTERS AND SETTERS-----------------------------------------//
@@ -153,9 +158,13 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         //Setting JFrame Options
         f.setSize(w,h);
         f.setTitle("Memory Game");
+        f.setSize(420, 440);
         f.add(dc); //adding canvas to the JFrame
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setResizable(false);
         f.setVisible(true);
+        f.setMinimumSize(f.getSize());
+
 
 
         //Setting session Ends
@@ -215,6 +224,8 @@ public class DrawingCanvas extends JComponent implements MouseListener {
 
                 if(previousIndex != index)
                 {
+
+                    //
                     if(previousColor == color)
                     {
                         indexFound[index] = true;
@@ -223,10 +234,20 @@ public class DrawingCanvas extends JComponent implements MouseListener {
                     }
                     else
                     {
-                        clearCircle(index);
-                        clearCircle(previousIndex);
+                        drawCircle(color,index);
+                        try {
+                            TimeUnit.SECONDS.sleep(1);
+
+                            clearCircle(index);
+                            clearCircle(previousIndex);
+
+                        } catch (InterruptedException ie) {
+                            Thread.currentThread().interrupt();
+                        }
+
                     }
                     Clicked= false;
+                    //
                 }
 
             }
@@ -358,10 +379,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
     }
 
 
-    public void colorEncoder()
-    {
 
-    }
 
     public void clearCircle(int index)
     {
@@ -370,82 +388,82 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         if(index ==0)
         {
             g2d.setColor(Color.WHITE);
-            g2d.fillOval(0,0,100,100);
+            g2d.fillOval(0,0,99,99);
         }
         else if(index ==1)
         {
             g2d.setColor(Color.WHITE);
-            g2d.fillOval(100,0,100,100);
+            g2d.fillOval(100,0,99,99);
         }
         else if(index ==2)
         {
             g2d.setColor(Color.WHITE);
-            g2d.fillOval(200,0,100,100);
+            g2d.fillOval(200,0,99,99);
         }
         else if(index ==3)
         {
             g2d.setColor(Color.WHITE);
-            g2d.fillOval(300,0,100,100);
+            g2d.fillOval(300,0,99,99);
         }
         else if(index ==4)
         {
             g2d.setColor(Color.WHITE);
-            g2d.fillOval(0,100,100,100);
+            g2d.fillOval(0,100,99,99);
         }
         else if(index ==5)
         {
             g2d.setColor(Color.WHITE);
-            g2d.fillOval(100,100,100,100);
+            g2d.fillOval(100,100,99,99);
         }
         else if(index ==6)
         {
             g2d.setColor(Color.WHITE);
-            g2d.fillOval(200,100,100,100);
+            g2d.fillOval(200,100,99,99);
         }
         else if(index ==7)
         {
             g2d.setColor(Color.WHITE);
-            g2d.fillOval(300,100,100,100);
+            g2d.fillOval(300,100,99,99);
         }
         else if(index ==8)
         {
             g2d.setColor(Color.WHITE);
-            g2d.fillOval(0,200,100,100);
+            g2d.fillOval(0,200,99,99);
         }
         else if(index ==9)
         {
             g2d.setColor(Color.WHITE);
-            g2d.fillOval(100,200,100,100);
+            g2d.fillOval(100,200,99,99);
         }
         else if(index ==10)
         {
             g2d.setColor(Color.WHITE);
-            g2d.fillOval(200,200,100,100);
+            g2d.fillOval(200,200,99,99);
         }
         else if(index ==11)
         {
             g2d.setColor(Color.WHITE);
-            g2d.fillOval(300,200,100,100);
+            g2d.fillOval(300,200,99,99);
         }
         else if(index ==12)
         {
             g2d.setColor(Color.WHITE);
-            g2d.fillOval(0,300,100,100);
+            g2d.fillOval(0,300,99,99);
         }
         else if(index ==13)
         {
             g2d.setColor(Color.WHITE);
-            g2d.fillOval(100,300,100,100);
+            g2d.fillOval(100,300,99,99);
         }
         else if(index ==14)
         {
             g2d.setColor(Color.WHITE);
-            g2d.fillOval(200,300,100,100);
+            g2d.fillOval(200,300,99,99);
         }
         else if(index ==15)
         {
             g2d.setColor(Color.WHITE);
-            g2d.fillOval(300,300,100,100);
+            g2d.fillOval(300,300,99,99);
         }
     }
     public  void drawCircle(Color color, int index)
@@ -455,7 +473,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         if(index ==0)
         {
             g2d.setColor(Color.BLACK);
-            g2d.fillOval(0,0,100,100);
+            g2d.fillOval(0,0,99,99);
             g2d.setColor(Color.WHITE);
             g2d.fillOval(15,15,70,70);
             g2d.setColor(color);
@@ -464,7 +482,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         else if(index ==1)
         {
             g2d.setColor(Color.BLACK);
-            g2d.fillOval(100,0,100,100);
+            g2d.fillOval(100,0,99,99);
             g2d.setColor(Color.WHITE);
             g2d.fillOval(115,15,70,70);
             g2d.setColor(color);
@@ -473,7 +491,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         else if(index ==2)
         {
             g2d.setColor(Color.BLACK);
-            g2d.fillOval(200,0,100,100);
+            g2d.fillOval(200,0,99,99);
             g2d.setColor(Color.WHITE);
             g2d.fillOval(215,15,70,70);
             g2d.setColor(color);
@@ -482,7 +500,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         else if(index ==3)
         {
             g2d.setColor(Color.BLACK);
-            g2d.fillOval(300,0,100,100);
+            g2d.fillOval(300,0,99,99);
             g2d.setColor(Color.WHITE);
             g2d.fillOval(315,15,70,70);
             g2d.setColor(color);
@@ -491,7 +509,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         else if(index ==4)
         {
             g2d.setColor(Color.BLACK);
-            g2d.fillOval(0,100,100,100);
+            g2d.fillOval(0,100,99,99);
             g2d.setColor(Color.WHITE);
             g2d.fillOval(15,115,70,70);
             g2d.setColor(color);
@@ -500,7 +518,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         else if(index ==5)
         {
             g2d.setColor(Color.BLACK);
-            g2d.fillOval(100,100,100,100);
+            g2d.fillOval(100,100,99,99);
             g2d.setColor(Color.WHITE);
             g2d.fillOval(115,115,70,70);
             g2d.setColor(color);
@@ -509,7 +527,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         else if(index ==6)
         {
             g2d.setColor(Color.BLACK);
-            g2d.fillOval(200,100,100,100);
+            g2d.fillOval(200,100,99,99);
             g2d.setColor(Color.WHITE);
             g2d.fillOval(215,115,70,70);
             g2d.setColor(color);
@@ -518,7 +536,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         else if(index ==7)
         {
             g2d.setColor(Color.BLACK);
-            g2d.fillOval(300,100,100,100);
+            g2d.fillOval(300,100,99,99);
             g2d.setColor(Color.WHITE);
             g2d.fillOval(315,115,70,70);
             g2d.setColor(color);
@@ -527,7 +545,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         else if(index ==8)
         {
             g2d.setColor(Color.BLACK);
-            g2d.fillOval(0,200,100,100);
+            g2d.fillOval(0,200,99,99);
             g2d.setColor(Color.WHITE);
             g2d.fillOval(15,215,70,70);
             g2d.setColor(color);
@@ -536,7 +554,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         else if(index ==9)
         {
             g2d.setColor(Color.BLACK);
-            g2d.fillOval(100,200,100,100);
+            g2d.fillOval(100,200,99,99);
             g2d.setColor(Color.WHITE);
             g2d.fillOval(115,215,70,70);
             g2d.setColor(color);
@@ -545,7 +563,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         else if(index ==10)
         {
             g2d.setColor(Color.BLACK);
-            g2d.fillOval(200,200,100,100);
+            g2d.fillOval(200,200,99,99);
             g2d.setColor(Color.WHITE);
             g2d.fillOval(215,215,70,70);
             g2d.setColor(color);
@@ -554,7 +572,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         else if(index ==11)
         {
             g2d.setColor(Color.BLACK);
-            g2d.fillOval(300,200,100,100);
+            g2d.fillOval(300,200,99,99);
             g2d.setColor(Color.WHITE);
             g2d.fillOval(315,215,70,70);
             g2d.setColor(color);
@@ -563,7 +581,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         else if(index ==12)
         {
             g2d.setColor(Color.BLACK);
-            g2d.fillOval(0,300,100,100);
+            g2d.fillOval(0,300,99,99);
             g2d.setColor(Color.WHITE);
             g2d.fillOval(15,315,70,70);
             g2d.setColor(color);
@@ -572,7 +590,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         else if(index ==13)
         {
             g2d.setColor(Color.BLACK);
-            g2d.fillOval(100,300,100,100);
+            g2d.fillOval(100,300,99,99);
             g2d.setColor(Color.WHITE);
             g2d.fillOval(115,315,70,70);
             g2d.setColor(color);
@@ -581,7 +599,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         else if(index ==14)
         {
             g2d.setColor(Color.BLACK);
-            g2d.fillOval(200,300,100,100);
+            g2d.fillOval(200,300,99,99);
             g2d.setColor(Color.WHITE);
             g2d.fillOval(215,315,70,70);
             g2d.setColor(color);
@@ -590,7 +608,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         else if(index ==15)
         {
             g2d.setColor(Color.BLACK);
-            g2d.fillOval(300,300,100,100);
+            g2d.fillOval(300,300,99,99);
             g2d.setColor(Color.WHITE);
             g2d.fillOval(315,315,70,70);
             g2d.setColor(color);

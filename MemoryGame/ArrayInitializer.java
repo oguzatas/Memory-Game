@@ -53,15 +53,15 @@ public class ArrayInitializer {
         setGame(game);
 
         /* THIS CODE LINE IS HERE TO TEST THE ARRAY ALGORYTHM. UNCOMMENT IF NEEDED */
-//        for(int i=0; i<4;i++)
-//        {
-//            for(int j=0;j<4;j++)
-//            {
-//                System.out.print(game[i][j]);
-//
-//            }
-//            System.out.println("");
-//        }
+        for(int i=0; i<4;i++)
+        {
+            for(int j=0;j<4;j++)
+            {
+                System.out.print(game[i][j]);
+
+            }
+            System.out.println("");
+        }
     }
 
     public static void EncodeColors()

@@ -8,7 +8,7 @@ import javax.swing.*;
 public class DrawingCanvas extends JComponent implements MouseListener {
 
 
-    public boolean Clicked= false;
+
 
 //    public static void main(String args[]) {
 //
@@ -25,25 +25,19 @@ public class DrawingCanvas extends JComponent implements MouseListener {
 //
 //    }
 
-
+    //---------------------------------------------PROPERTIES-----------------------------------------//
+    public boolean Clicked= false;
     private int width;
     private int height;
-
     private int index;
-
     private int previousIndex;
-
-
-
     private Color color;
-
     private Color previousColor;
-
-
-
     public int game[][];
 
+    public boolean indexFound[] = new boolean[16];
 
+    //---------------------------------------------CONSTRUCTORS-----------------------------------------//
 
 
     public DrawingCanvas(int w, int h) //
@@ -56,6 +50,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         game = ArrayInitializer.getGame();
     }
 
+    //---------------------------------------------GETTERS AND SETTERS-----------------------------------------//
     public void setIndex(int index) {
         this.index = index;
     }
@@ -66,7 +61,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
 
     public Color getColor() {
         return color;
-    }
+}
 
     public void setColor(int Color) {
 
@@ -97,6 +92,8 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         }
 
 
+
+
     }
 
     public int getPreviousIndex() {
@@ -116,7 +113,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
     }
 
 
-
+//---------------------------------------------METHODS-----------------------------------------//
 
     protected void paintComponent(Graphics g) {  // With this method setting the board within the run
         //New Graphics object to draw board
@@ -169,50 +166,71 @@ public class DrawingCanvas extends JComponent implements MouseListener {
     public void mouseClicked(MouseEvent e) {
         //Drawer d = new Drawer();
 
+
+
+
+
+        // if(indexFound[index])
+
         if(!Clicked)
         {
             double Xcor = e.getX();
             double Ycor = e.getY();
-            indexDetector(Xcor,Ycor);
-            index = getIndex();
-            color = getColor();
-            drawCircle(color,index);
-            Clicked = true;
+            indexDetector(Xcor,Ycor); //Sets Index and identifies the color where clicked
+
+
+
+            if(indexFound[index] == false)
+            {
+                index = getIndex();
+                color = getColor();
+                drawCircle(color,index);
+                setPreviousColor(getColor());
+                setPreviousIndex(getIndex());
+                Clicked = true;
+            }
+
         }
 
         else
         {
+
+            //
             double Xcor = e.getX();
             double Ycor = e.getY();
-
-            setPreviousColor(getColor());
-            setPreviousIndex(getIndex());
-//            previousColor = color;
-//            previousIndex = index;
-
             indexDetector(Xcor,Ycor);
 
-            index = getIndex();
-            color = getColor();
 
-            System.out.println(index);
-            System.out.println(color);
-            System.out.println(previousIndex);
-            System.out.println(previousColor);
 
-            if(previousIndex != index)
+//            System.out.println(index);
+//            System.out.println(color);
+//            System.out.println(previousIndex);
+//            System.out.println(previousColor);
+            //
+
+            if(indexFound[index]==false)
             {
-                if(previousColor == color)
+                index = getIndex();
+                color = getColor();
+
+                if(previousIndex != index)
                 {
-                    // TODO save it and prevent reuse
+                    if(previousColor == color)
+                    {
+                        indexFound[index] = true;
+                        indexFound[previousIndex] = true;
+                        drawCircle(color,index);
+                    }
+                    else
+                    {
+                        clearCircle(index);
+                        clearCircle(previousIndex);
+                    }
+                    Clicked= false;
                 }
-                else
-                {
-                    clearCircle(index);
-                    clearCircle(previousIndex);
-                }
-                Clicked= false;
+
             }
+
 
 
 
@@ -250,6 +268,96 @@ public class DrawingCanvas extends JComponent implements MouseListener {
 
 
     public void indexDetector(double X, double Y)
+    {
+        //Line 1
+        if(X < 100 && Y < 100)
+        {
+            setIndex(0);
+            setColor(game[0][0]);
+        }
+        else if (X<200 && Y<100)
+        {
+            setIndex(1);
+            setColor(game[0][1]);
+        }
+        else if (X<300 && Y<100)
+        {
+            setIndex(2);
+            setColor(game[0][2]);
+        }
+        else if (X<400 && Y<100)
+        {
+            setIndex(3);
+            setColor(game[0][3]);
+        }
+        //Line 2
+        else if (X<100 && Y<200)
+        {
+            setIndex(4);
+            setColor(game[1][0]);
+        }
+        else if (X<200 && Y<200)
+        {
+            setIndex(5);
+            setColor(game[1][1]);
+        }
+        else if (X<300 && Y<200)
+        {
+            setIndex(6);
+            setColor(game[1][2]);
+        }
+        else if (X<400 && Y<200)
+        {
+            setIndex(7);
+            setColor(game[1][3]);
+        }
+        //Line 3
+        else if (X<100 && Y<300)
+        {
+            setIndex(8);
+            setColor(game[2][0]);
+        }
+        else if (X<200 && Y<300)
+        {
+            setIndex(9);
+            setColor(game[2][1]);
+        }
+        else if (X<300 && Y<300)
+        {
+            setIndex(10);
+            setColor(game[2][2]);
+        }
+        else if (X<400 && Y<300)
+        {
+            setIndex(11);
+            setColor(game[2][3]);
+        }
+        //Line 4
+        else if (X<100 && Y<400)
+        {
+            setIndex(12);
+            setColor(game[3][0]);
+        }
+        else if (X<200 && Y<400)
+        {
+            setIndex(13);
+            setColor(game[3][1]);
+        }
+        else if (X<300 && Y<400)
+        {
+            setIndex(14);
+            setColor(game[3][2]);
+
+        }
+        else if (X<400 && Y<400)
+        {
+            setIndex(15);
+            setColor(game[3][3]);
+
+        }
+    }
+
+    public void colorDetector(double X, double Y)
     {
         //Line 1
         if(X < 100 && Y < 100)

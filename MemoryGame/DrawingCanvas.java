@@ -357,95 +357,6 @@ public class DrawingCanvas extends JComponent implements MouseListener {
         }
     }
 
-    public void colorDetector(double X, double Y)
-    {
-        //Line 1
-        if(X < 100 && Y < 100)
-        {
-            setIndex(0);
-            setColor(game[0][0]);
-        }
-        else if (X<200 && Y<100)
-        {
-            setIndex(1);
-            setColor(game[0][1]);
-        }
-        else if (X<300 && Y<100)
-        {
-            setIndex(2);
-            setColor(game[0][2]);
-        }
-        else if (X<400 && Y<100)
-        {
-            setIndex(3);
-            setColor(game[0][3]);
-        }
-        //Line 2
-        else if (X<100 && Y<200)
-        {
-            setIndex(4);
-            setColor(game[1][0]);
-        }
-        else if (X<200 && Y<200)
-        {
-            setIndex(5);
-            setColor(game[1][1]);
-        }
-        else if (X<300 && Y<200)
-        {
-            setIndex(6);
-            setColor(game[1][2]);
-        }
-        else if (X<400 && Y<200)
-        {
-            setIndex(7);
-            setColor(game[1][3]);
-        }
-        //Line 3
-        else if (X<100 && Y<300)
-        {
-            setIndex(8);
-            setColor(game[2][0]);
-        }
-        else if (X<200 && Y<300)
-        {
-            setIndex(9);
-            setColor(game[2][1]);
-        }
-        else if (X<300 && Y<300)
-        {
-            setIndex(10);
-            setColor(game[2][2]);
-        }
-        else if (X<400 && Y<300)
-        {
-            setIndex(11);
-            setColor(game[2][3]);
-        }
-        //Line 4
-        else if (X<100 && Y<400)
-        {
-            setIndex(12);
-            setColor(game[3][0]);
-        }
-        else if (X<200 && Y<400)
-        {
-            setIndex(13);
-            setColor(game[3][1]);
-        }
-        else if (X<300 && Y<400)
-        {
-            setIndex(14);
-            setColor(game[3][2]);
-
-        }
-        else if (X<400 && Y<400)
-        {
-            setIndex(15);
-            setColor(game[3][3]);
-
-        }
-    }
 
     public void colorEncoder()
     {
@@ -455,6 +366,7 @@ public class DrawingCanvas extends JComponent implements MouseListener {
     public void clearCircle(int index)
     {
         Graphics g2d = getGraphics();
+
         if(index ==0)
         {
             g2d.setColor(Color.WHITE);

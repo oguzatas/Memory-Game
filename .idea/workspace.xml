@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1f45752f-d9ce-424a-ad38-d808b8204275" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Memory-Game.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryGame/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryGame/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryGame/MemoryGame.eml" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryGame/MemoryGame.eml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryGame/MemoryGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryGame/MemoryGame.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryGame/out/production/MemoryGame/ArrayInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryGame/out/production/MemoryGame/ArrayInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryGame/out/production/MemoryGame/DrawingCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryGame/out/production/MemoryGame/DrawingCanvas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/untitled.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HuWtQECuBh4zbSEgSUM3erQ9bl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/serqu/OneDrive/Masaüstü/workspace2/IKCUProject01/Memory-Game/MemoryGame&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f45752f-d9ce-424a-ad38-d808b8204275" name="Changes" comment="" />
+      <created>1669135662524</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669135662524</updated>
+      <workItem from="1669135663767" duration="36000" />
+      <workItem from="1669141133109" duration="912000" />
+      <workItem from="1669145477708" duration="276000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
